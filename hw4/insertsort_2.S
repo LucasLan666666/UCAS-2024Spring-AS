@@ -36,11 +36,9 @@ print_array:
 
     pushl   $newline
     call    printf
-    pushl   $0
-    call    fflush
 
     # exit
-    addl    $0x38, %esp
+    addl    $0x34, %esp
     movl    $1, %eax
     movl    $0, %ebx
     int	    $0x80
