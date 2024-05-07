@@ -1,6 +1,3 @@
-.section .data
-    pre:        .byte '-', '0', 'x'
-
 .section .text
     .global print_hex
     .global get_sign
