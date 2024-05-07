@@ -54,7 +54,12 @@ print_hex:
     cmpb    $48, (%ecx)
     je      jump_pre_0
 
-    /* (-)0x */
+    /* case 0 */
+    cmpb    $10, (%ecx)
+    jne     prefix
+    dec     %ecx
+
+    prefix:
     subl    $2, %ecx
     movb    $45, -1(%ecx)       # '-'
     movb    $48, (%ecx)         # '0'
