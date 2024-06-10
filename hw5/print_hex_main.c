@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 extern void print_hex(int num);
 
 int
