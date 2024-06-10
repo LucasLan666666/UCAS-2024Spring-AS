@@ -73,8 +73,8 @@ print_hex:
 
 
     /* output */
-    movl    $4, %eax
-    movl    $1, %ebx
+    movl    $4, %eax            # write
+    movl    $1, %ebx            # stdout
     int	    $0x80
 
     addl    $12, %esp
